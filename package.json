@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/ByteSizedIT/week4-sample-project#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2"
   },
   "devDependencies": {

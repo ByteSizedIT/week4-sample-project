@@ -1,8 +1,9 @@
 {
     "env": {
-        "browser": true,
+        // "browser": true,
         "commonjs": true,
-        "es2021": true
+        "es2021": true,
+        "node": true // stops process being ESLint undefined in index.js
     },
     "extends": "eslint:recommended",
     "overrides": [
