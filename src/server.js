@@ -1,9 +1,8 @@
 const express = require("express");
+const { homeHandler } = require("./routes");
 
 const server = express();
 
-server.get("/", (req, res) => {
-  res.send(`<h1>Hey World!</h1>`);
-});
+server.get("/", homeHandler);
 
 module.exports = { server };
