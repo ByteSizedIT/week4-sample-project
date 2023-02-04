@@ -15,11 +15,20 @@ function layout(title, content) {
     `;
 }
 
-function homeTemplate() {
+function homeTemplate(user, LOGIN_URL) {
   const title = "FAC Reviews";
-  const content = /*html*/ `
-        <h1>Reviewed by FaC</h1>
-      `;
+  const content = user
+    ? /*html*/ `
+      <h1>Welcome back ${user}</h1>
+      <h2>Reviewed by FaC</h2>
+      <form action="/log-out" method="post"><button>Log out</button></form>
+    `
+    : /*html*/ `
+      <nav>
+        <a href="${LOGIN_URL}">Log in with GitHub</a>
+      </nav>
+      <h1>Welcome</h1>
+    `;
   return layout(title, content);
 }
 
