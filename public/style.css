@@ -1,3 +1,122 @@
+/* font-family: 'Architects Daughter', cursive;
+font-family: 'Roboto', sans-serif; */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: grey;
+  background-color: #86e5ff;
+  color: #3a3b3c;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+nav {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  background-color: #0081c9;
+}
+
+nav h1 {
+  font-size: 2rem;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #ffc93c;
+}
+
+.btn {
+  border-style: none;
+  border-radius: 5px;
+  padding: 4px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.orange-btn {
+  background-color: #ffc93c;
+}
+
+.blue-btn {
+  background-color: #5bc0f8;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 2.5em;
+}
+
+h2,
+h3 {
+  color: #0081c9;
+}
+
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  border: 1px solid #888;
+  background-color: #fefefe;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.modal-btn {
+  width: 50%;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  /* float: right; */
+  align-self: flex-end;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
