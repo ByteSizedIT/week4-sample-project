@@ -120,3 +120,21 @@ form {
   text-decoration: none;
   cursor: pointer;
 }
+
+form sup {
+  color: red;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
+
+/*
+attr$="value" matches the _end_ of the attribute
+e.g. [id$="Error"] matches id="passwordError" but doesn't match id="passwordHelp"
+*/
+[aria-invalid="true"] + [id$="Error"] {
+  color: red;
+}
+
+[aria-invalid="true"] + [id$="Error"]::before {
+  content: "⚠️ ";
+}

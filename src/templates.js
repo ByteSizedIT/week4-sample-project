@@ -46,10 +46,15 @@ function homeTemplate(user, LOGIN_URL) {
             <span id="closeSignUp" class="close">&times;</span>
             <h2>Sign up to F&CVibes</h2>
             <form id="signUpForm">
-              <label>Name</label><input/>
-              <label>Cohort</label><input/>
-              <label>Email</label><input/>
-              <label>Password</label><input/>
+              <label for="name">Name<sup aria-hidden="true">*</sup></label>
+              <input id="name" required/>
+              <label for="cohort">Cohort</label><input id="cohort"/>
+              <label for="signEmail">Email<sup aria-hidden="true">*</sup></label>
+              <input id="signEmail" type="email" required/>
+              <label for="signPassword">Password<sup aria-hidden="true">*</sup></label>
+              <input id="signPassword" type="password" aria-describedby="signPasswordHelp" required/>
+              <span id="signPasswordHelp">Password must be atleast 10 chars long</span>
+              
             </form>
             <button form="signUpForm" class="btn modal-btn blue-btn">Sign up with email</button>
             <a href="${LOGIN_URL}" class="btn modal-btn orange-btn"><i class="fa fa-github"></i>  Sign up with GitHub</a>
@@ -63,8 +68,10 @@ function homeTemplate(user, LOGIN_URL) {
             <span id="closeLogIn" class="close">&times;</span>
             <h2>Log in to F&CVibes</h2>
             <form id="logInForm">
-              <label>Email</label><input/>
-              <label>Password</label><input/>   
+              <label for="logEmail">Email<sup aria-hidden="true">*</sup></label>
+              <input id="logEmail" type="email" required/>
+              <label for="logPassword">Password<sup aria-hidden="true">*</sup></label>
+              <input id="logPassword" type="password" required/>   
             </form>
             <button form="logInForm" class="btn modal-btn blue-btn">Log in with email</button> 
             <a href="${LOGIN_URL}" class="btn modal-btn orange-btn"><i class="fa fa-github"></i>  Log in with GitHub</a>
