@@ -77,7 +77,7 @@ allFields.forEach((field) => {
   // Provide feedback to user ...
   // i.e. create <p> element to display error and an aria-describedBy ref'ing it the initial field)....
   const feedback = document.createElement("p");
-  const id = `${field.id} Error`;
+  const id = `${field.id}Error`;
   feedback.setAttribute("id", id);
   // don't overwrite any existing aria-describedby in the original field
   const prevIds = field.getAttribute("aria-describedBy");
