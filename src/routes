@@ -1,8 +1,0 @@
-const { homeTemplate } = require("./templates.js");
-
-function homeHandler(req, res) {
-  const body = homeTemplate();
-  res.send(body);
-}
-
-module.exports = { homeHandler };
