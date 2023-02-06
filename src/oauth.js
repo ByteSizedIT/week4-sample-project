@@ -35,6 +35,16 @@ function getToken(code) {
   "token_type":"bearer"
 } */
 
+// Use the access token to make requests to the API on a behalf of user:
+
+const USER_URL = "https://api.github.com/user";
+
+function getUser(token) {
+  return fetch(USER_URL, {
+    headers: { accept: "application/json", authorization: `token ${token}` },
+  }).then(getJson);
+}
+
 function getJson(response) {
   if (!response.ok) {
     console.log(response);
@@ -45,4 +55,4 @@ function getJson(response) {
   return response.json();
 }
 
-module.exports = { getToken };
+module.exports = { getToken, getUser };

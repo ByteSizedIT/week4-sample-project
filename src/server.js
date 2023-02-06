@@ -24,8 +24,23 @@ server.get("/", homeHandler);
 // If the states don't match, then a third party created the request, and you should abort the process.
 server.get("/oauth2callback", (req, res) => {
   const code = req.query.code;
-  oauth.getToken(code);
-  res.redirect("/hell-yeah");
+  oauth
+    .getToken(code)
+    .then(oauth.getUser)
+    .then((user) => {
+      console.log({ user });
+      // TODO:
+      // create a new user in app DB
+      // create session in app DB and ref in cookies etc
+      // Interim temp solution adds the username into the cookie
+      res.cookie("user", user.login, {
+        httpOnly: true,
+        signed: true,
+        maxAge: 1000 * 60 * 60 * 24,
+        sameSite: "lax",
+      });
+      res.redirect("/hell-yeah");
+    });
 });
 
 server.get("/hell-yeah", (req, res) => {
