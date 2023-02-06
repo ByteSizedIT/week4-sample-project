@@ -17,8 +17,4 @@ server.get("/", homeHandler);
 // If user accepts auth request, GitHub redirects back to route below
 server.get("/oauth2callback", oauthHandler);
 
-server.get("/hell-yeah", (req, res) => {
-  res.send(`<h1>Authorized!</h1>`);
-});
-
 module.exports = { server };

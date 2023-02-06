@@ -24,7 +24,7 @@ function oauthHandler(req, res) {
         maxAge: 1000 * 60 * 60 * 24,
         sameSite: "lax",
       });
-      res.redirect("/hell-yeah");
+      res.redirect("/");
     });
 }
 
