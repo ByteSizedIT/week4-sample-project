@@ -24,7 +24,7 @@ function layout(title, content) {
       `;
 }
 
-function homeTemplate(user, LOGIN_URL) {
+function homeTemplate(user, GITHUB_LOGIN_URL) {
   const title = "FAC Reviews";
   const content = /*html*/ `
         ${calcNav(user)}
@@ -57,7 +57,7 @@ function homeTemplate(user, LOGIN_URL) {
               
             </form>
             <button form="signUpForm" class="btn modal-btn blue-btn">Sign up with email</button>
-            <a href="${LOGIN_URL}" class="btn modal-btn orange-btn"><i class="fa fa-github"></i>  Sign up with GitHub</a>
+            <a href="${GITHUB_LOGIN_URL}" class="btn modal-btn orange-btn"><i class="fa fa-github"></i>  Sign up with GitHub</a>
           </div>
         </div>
   
@@ -74,7 +74,7 @@ function homeTemplate(user, LOGIN_URL) {
               <input id="logPassword" type="password" required/>   
             </form>
             <button form="logInForm" class="btn modal-btn blue-btn">Log in with email</button> 
-            <a href="${LOGIN_URL}" class="btn modal-btn orange-btn"><i class="fa fa-github"></i>  Log in with GitHub</a>
+            <a href="${GITHUB_LOGIN_URL}" class="btn modal-btn orange-btn"><i class="fa fa-github"></i>  Log in with GitHub</a>
           </div>
         </div>
       `;
